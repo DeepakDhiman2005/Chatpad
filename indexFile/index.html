@@ -12,12 +12,6 @@
         flex-direction: column;
         background: #6495eddb;
     }
-    #messages{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
     #form{
         position: fixed;
@@ -57,22 +51,12 @@
         box-shadow: 0px 0px 8px green;
     }
     li{
-        background: blanchedalmond;
+        background: whitesmoke;
         padding: 15px;
         font-family: system-ui;
-        display: flex;
-        justify-content: flex-start;
-        color: currentColor;
-        width: 90%;
-        text-align: center;
-        border-radius: 4px;
-        margin: 10px;
-        box-shadow: 0px 0px 6px ghostwhite;
     }
     li:nth-child(2n){
         background: transparent;
-        justify-content: flex-end;
-        background: aliceblue;
     }
 
     @media only screen and (max-width: 440px) {
@@ -90,11 +74,11 @@
 <body>
     <ul id="messages"></ul>
     <form id="form" action="">
-        <input id="input" autocomplete="off" /><button>Send</button>
+        <input id="input" autocomplete="off" /><button>Send ➤</button>
     </form>
 </body>
-<!-- <script src="/socket.io/socket.io.js"></script> -->
-<script  src="/socket.io/socket.io.js">
+<script src="/socket.io/socket.io.js"></script>
+<script>
     var socket = io();
 
     // console.log("start");
@@ -115,7 +99,7 @@
 
     socket.on('chat message', function (msg, user) {
         var item = document.createElement('li');
-        item.textContent = "_"+user+"_: "+msg;
+        item.textContent = ""+user+" ⮞ "+msg;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
     });
