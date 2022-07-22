@@ -1,6 +1,5 @@
 {
   "name": "chatpad",
-  "homepage": "https://deepakdhiman2005.github.io/Chatpad/",
   "version": "1.0.0",
   "description": "my first chat application",
   "main": "index.js",
@@ -84,5 +83,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DeepakDhiman2005/Chatpad/issues"
-  }
+  },
+  "homepage": "https://github.com/DeepakDhiman2005/Chatpad#readme"
 }
